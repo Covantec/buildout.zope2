@@ -13,18 +13,21 @@ Estos son los requerimientos mínimos de instalación: ::
 Inicialización del proyecto
 ===========================
 
-::
+Para la inicialización del proyecto Buildout, ejecute el siguiente comando: ::
+
   python bootstrap.py
 
 Construcción del proyecto
 =========================
 
-::
+Para la construcción del proyecto Buildout, ejecute el siguiente comando: ::
+
   ./bin/buildout
 
 Ejecutar servidor Zope2
 =======================
 
-::
+Para ejecutar servidor Zope2, ejecute el siguiente comando: ::
+
   ./bin/zope2 fg
 
