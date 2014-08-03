@@ -1,0 +1,15 @@
+# http://about.travis-ci.org/docs/user/build-configuration/
+language: python
+python: 2.7
+
+install:
+  - pip install -U setuptools
+  - python bootstrap.py
+  - bin/buildout -q -N -t 3
+before_script:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+script: bin/zope2 fg
+after_failure:
+  - bin/buildout annotate
+  - firefox -v
