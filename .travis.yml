@@ -9,7 +9,7 @@ install:
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
-script: bin/zope2 fg
+#script: bin/zope2 fg
 after_failure:
   - bin/buildout annotate
   - firefox -v
