@@ -1,16 +1,47 @@
+==============
 buildout.zope2
 ==============
 
-Configuración de buildout para el servidor de aplicaciones Zope 2.
+Configuración de buildout para el servidor de aplicaciones Zope 2 con Python 2.7.
+
+.. image:: https://travis-ci.org/Covantec/buildout.zope2.svg?branch=master
+   :target: https://travis-ci.org/Covantec/buildout.zope2
+
+
+Características
+===============
+
+- `Zope 2.13.27 <https://pypi.org/project/Zope2/2.13.27/>`_.
+
+- `Python 2.7 <https://www.python.org/download/releases/2.7/>`_.
+
 
 Requerimientos
 ==============
 
 Estos son los requerimientos mínimos de instalación: ::
 
-  sudo apt-get install gcc g++ make tar unzip bzip2 libssl-dev libxml2-dev zlib1g-dev \
-                       libjpeg62-dev libreadline6-dev readline-common wv xpdf-utils \
-                       python2.7-dev libxslt1-dev
+  sudo apt-get update && sudo apt-get upgrade -y
+  sudo apt-get install git gcc g++ make tar unzip bzip2 libssl-dev libxml2-dev zlib1g-dev \
+                       libjpeg62-turbo-dev libreadline-dev readline-common wv poppler-utils \
+                       python2.7-dev libxslt1-dev python-wheel
+
+Descargar
+=========
+
+Para la descargar del proyecto Buildout, ejecute el siguiente comando: ::
+
+  git clone https://github.com/Covantec/buildout.zope2.git
+
+
+Entorno virtual
+===============
+
+Se requiere crear y activar un entorno virtual Python para proyecto Buildout, ejecute los siguientes comando: ::
+
+  virtualenv --python=/usr/bin/python2 venv
+  source ./venv/bin/activate
+
 
 Inicialización del proyecto
 ===========================
@@ -19,6 +50,7 @@ Para la inicialización del proyecto Buildout, ejecute el siguiente comando: ::
 
   python bootstrap.py
 
+
 Construcción del proyecto
 =========================
 
@@ -26,12 +58,14 @@ Para la construcción del proyecto Buildout, ejecute el siguiente comando: ::
 
   ./bin/buildout
 
+
 Ejecutar servidor Zope2
 =======================
 
 Para ejecutar servidor Zope2, ejecute el siguiente comando: ::
 
   ./bin/zope2 fg
+
 
 Otros comandos disponibles
 ==========================
@@ -41,6 +75,8 @@ Otros comandos disponibles
   Permite agregar un nuevo usuario Zope, ejecutando el siguiente comando: ::
 
     ./bin/addzope2user <username> <password>
+
+  Para mas información consulte la ayuda incluida en el script con el siguiente comando ``./bin/addzope2user -h``.
 
 ./bin/mkzopeinstance
 
@@ -72,7 +108,7 @@ Otros comandos disponibles
 
     ./bin/zopectl start
 
-  Para mas información consulte la ayuda incluida en el script con el siguiente comando ``./bin/zopectl -h``. Adicionalmente consulte `Installing and Zope with zc.buildout — Zope 2 v2.13 documentation <https://zope.readthedocs.io/en/2.13/INSTALL-buildout.html>`_.
+  Para mas información consulte la ayuda incluida en el script con el siguiente comando ``./bin/zopectl -h``. Adicionalmente consulte el articulo `Installing and Zope with zc.buildout — Zope 2 v2.13 documentation <https://zope.readthedocs.io/en/2.13/INSTALL-buildout.html>`_.
 
 ./bin/zopepy
 
@@ -87,15 +123,15 @@ Otros comandos disponibles
 
   Es una utilidad que permite crear un archivo de contraseña Zope ('access') para la cuenta de superusuario en Zope. Este creará un archivo de contraseña con una sola línea con dos o tres campos separados por dos puntos: ``username:encrypted password[:domainlist]``.
 
-  Si este archivo se denomina ``access`` y poner en el directorio ``INSTANCE_HOME`` de una instancia de Zope, Zope usará nombre de usuario y contraseña como valores para el superusuario (administrador) de ese instancia.
+  Si este archivo se denomina ``access`` y poner en el directorio ``INSTANCE_HOME`` de una instancia de Zope, el servidor de aplicación Zope usará nombre de usuario y contraseña como valores para el superusuario (administrador) de ese instancia.
 
   Si este programa se llama la línea de comandos sin opciones, este le mostrara toda la información necesaria para ejecutar correctamente el comando ::
 
     ./bin/zpasswd
 
-  Aquí hay un ejemplo mas real donde se define al usuario ``NUEVO-USUARIO``, con la contraseña ``CONTRASENA-SUPER-SECRETA`` como administrador de uns instancia en especifica, ejecutando el siguiente comando: ::
+  Aquí hay un ejemplo mas real donde se define al usuario ``NUEVO-USUARIO``, con la contraseña ``CONTRASENA-SUPER-SECRETA`` como administrador de unas instancia en especifica, ejecutando el siguiente comando: ::
 
     ./bin/zpasswd -u NUEVO-USUARIO -p CONTRASENA-SUPER-SECRETA $INSTANCE_HOME/access
 
-  Para mas información consulte `Special Users - Zope 2 v2.13 documentation <https://zope.readthedocs.io/en/2.13/USERS.html>`_.
+  Para mas información consulte la ayuda incluida en el script con el siguiente comando ``./bin/zpasswd -h``. Adicionalmente consulte el articulo `Special Users - Zope 2 v2.13 documentation <https://zope.readthedocs.io/en/2.13/USERS.html>`_.
 
