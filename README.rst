@@ -11,7 +11,9 @@ Configuración de buildout para el servidor de aplicaciones Zope 2 con Python 2.
 Características
 ===============
 
-- `Zope 2.13.27 <https://pypi.org/project/Zope2/2.13.27/>`_.
+- `Zope 2.13.29 <https://pypi.org/project/Zope2/2.13.29/>`_, la ultima versión soporta Zope 2.
+
+- `Zope 2.13.27 <https://pypi.org/project/Zope2/2.13.27/>`_, la ultima versión de Zope 2, soporta por la versión Plone 5.1.
 
 - `Python 2.7 <https://www.python.org/download/releases/2.7/>`_.
 
@@ -54,9 +56,13 @@ Para la inicialización del proyecto Buildout, ejecute el siguiente comando: ::
 Construcción del proyecto
 =========================
 
-Para la construcción del proyecto Buildout, ejecute el siguiente comando: ::
+Para la construcción del proyecto Buildout para obtener Zope 2.13.27, ejecute el siguiente comando: ::
 
   ./bin/buildout
+
+Para la construcción del proyecto Buildout para obtener Zope 2.13.29, ejecute el siguiente comando: ::
+
+  ./bin/buildout -c 2.13.29.cfg
 
 
 Ejecutar servidor Zope2
