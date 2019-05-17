@@ -1,4 +1,4 @@
-zope2.buildout
+buildout.zope2
 ==============
 
 Configuración de buildout para el servidor de aplicaciones Zope2
@@ -8,7 +8,7 @@ Requerimientos
 
 Estos son los requerimientos mínimos de instalación: ::
 
-  aptitude install gcc g++ make tar unzip bzip2 libssl-dev libxml2-dev zlib1g-dev libjpeg62-dev libreadline6-dev readline-common wv xpdf-utils python2.7-dev libxslt1-dev
+  sudo apt-get install gcc g++ make tar unzip bzip2 libssl-dev libxml2-dev zlib1g-dev libjpeg62-dev libreadline6-dev readline-common wv xpdf-utils python2.7-dev libxslt1-dev
 
 Inicialización del proyecto
 ===========================
