@@ -1,7 +1,7 @@
 buildout.zope2
 ==============
 
-Configuración de buildout para el servidor de aplicaciones Zope2
+Configuración de buildout para el servidor de aplicaciones Zope 2.
 
 Requerimientos
 ==============
@@ -72,7 +72,7 @@ Otros comandos disponibles
 
     ./bin/zopectl start
 
-  Para mas información consulte la ayuda incluida en el script con el siguiente comando ``./bin/zopectl -h``. Adicionalmente consulte `Installing and Zope with zc.buildout — Zope 2 v2.x documentation <http://docs.zope.org/zope2/releases/2.12/INSTALL-buildout.html>`_.
+  Para mas información consulte la ayuda incluida en el script con el siguiente comando ``./bin/zopectl -h``. Adicionalmente consulte `Installing and Zope with zc.buildout — Zope 2 v2.x documentation <https://zope.readthedocs.io/en/2.13/INSTALL-buildout.html>`_.
 
 ./bin/zopepy
 
@@ -97,5 +97,5 @@ Otros comandos disponibles
 
     ./bin/zpasswd -u NUEVO-USUARIO -p CONTRASENA-SUPER-SECRETA $INSTANCE_HOME/access
 
-  Para mas información consulte `Special Users - Zope 2 v2.x documentation <http://docs.zope.org/zope2/releases/2.12/USERS.html>`_.
+  Para mas información consulte `Special Users - Zope 2 v2.x documentation <https://zope.readthedocs.io/en/2.13/USERS.html>`_.
 
