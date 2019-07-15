@@ -11,8 +11,7 @@ Configuración de buildout para el servidor de aplicaciones Zope 2 con Python 2.
 Características
 ===============
 
-- `Zope 2.13.29 <https://pypi.org/project/Zope2/2.13.29/>`_, la ultima versión soporta 
-   Zope 2.
+- `Zope 2.13.29 <https://pypi.org/project/Zope2/2.13.29/>`_, la ultima versión soporta Zope 2.
 
 - `Zope 2.13.27 <https://pypi.org/project/Zope2/2.13.27/>`_, la ultima versión de Zope 2, 
   la cual soporta el proyecto Plone en su versión 5.1.
